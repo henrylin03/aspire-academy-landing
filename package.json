@@ -11,16 +11,12 @@
 		"astro": "astro",
 		"prepare": "husky"
 	},
-	"lint-staged": {
-		"*.*": "biome check --write --unsafe --no-errors-on-unmatched"
-	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.2.2",
 		"astro": "^6.1.5",
 		"tailwindcss": "^4.2.2"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.4.10",
 		"daisyui": "^5.5.19",
 		"husky": "^9.1.7",
 		"lint-staged": "^16.4.0"
