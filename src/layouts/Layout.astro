@@ -1,5 +1,6 @@
 ---
 import "@/assets/global.css";
+import Header from "@components/Header.astro";
 ---
 
 <html lang="en">
@@ -9,6 +10,7 @@ import "@/assets/global.css";
     <meta name="generator" content={Astro.generator} />
   </head>
   <body>
+    <Header />
     <main>
       <slot />
     </main>
