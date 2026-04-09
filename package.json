@@ -11,6 +11,9 @@
     "astro": "astro",
     "prepare": "husky"
   },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.1.5",
