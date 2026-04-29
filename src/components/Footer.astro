@@ -3,23 +3,28 @@ import { Image } from "astro:assets";
 import logoImg from "@images/quote-logo-circle.webp";
 ---
 
-<footer class="footer footer-horizontal bg-neutral text-neutral-content p-10">
+<footer
+  class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10"
+>
   <aside class="mx-auto gap-4">
-    <a href="/" aria-label="Return to Aspire Academy debating's home page"
+    <a
+      href="/"
+      aria-label="Return to Aspire Academy debating's home page"
+      class="mx-auto sm:mx-0"
       ><Image
         src={logoImg}
         alt="Logo for Aspire Academy debating"
         class="w-12"
       /></a
     >
-    <div>
+    <div class="text-center sm:text-left">
       <h2 class="text-lg font-semibold tracking-wide">Aspire Academy</h2>
       <p class="opacity-80">
         Sydney-based online debating and public speaking classes
       </p>
     </div>
   </aside>
-  <section class="m-auto grid grid-cols-2 gap-4">
+  <section class="m-auto gap-4 lg:grid-cols-2">
     <a
       class="btn btn-secondary btn-soft"
       href="/#free-consultation"
@@ -39,7 +44,7 @@ import logoImg from "@images/quote-logo-circle.webp";
         ></path></svg
       >
     </a>
-    <a class="btn btn-secondary" href="/enrol" role="button">
+    <a class="btn btn-secondary w-full lg:w-fit" href="/enrol" role="button">
       Enrol now<svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
