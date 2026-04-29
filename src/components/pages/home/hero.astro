@@ -3,16 +3,16 @@ import img from "@images/hero.jpg";
 import { Image } from "astro:assets";
 ---
 
-<section class="hero bg-base-200 p-12">
-  <div class="hero-content flex-col gap-10 lg:flex-row-reverse">
+<section class="hero bg-base-200">
+  <div class="hero-content">
     <Image
       src={img}
       alt="Student confidently speaking on stage after learning debating and public speaking"
       loading="eager"
-      class="w-full max-w-2xl"
+      class="hero-image"
     />
     <div>
-      <h2 class="text-6xl font-bold tracking-wide">
+      <h2 class="text-5xl font-bold tracking-wide sm:text-6xl">
         Think critically, speak confidently
       </h2>
       <p class="py-6">
@@ -20,7 +20,7 @@ import { Image } from "astro:assets";
         Private School students, taught by highly-experienced coach and
         adjudicator.
       </p>
-      <ul class="flex items-center gap-4">
+      <ul class="buttons">
         <li>
           <a class="btn btn-secondary" href="/enrol" role="button">
             Enrol now<svg
@@ -63,3 +63,50 @@ import { Image } from "astro:assets";
     </div>
   </div>
 </section>
+
+<style>
+  .hero-content {
+    gap: 2rem;
+    flex-direction: row-reverse;
+    padding: 4rem;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .hero-image {
+    max-width: 40rem;
+    width: 100%;
+  }
+
+  @media (max-width: 1172px) {
+    .hero-content {
+      flex-direction: column;
+    }
+    .buttons {
+      gap: 0.5rem;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .hero-content {
+      padding: 3rem 2.5rem;
+    }
+  }
+
+  @media (max-width: 399px) {
+    .hero-content {
+      padding: 1.75rem;
+    }
+
+    .buttons {
+      flex-direction: column;
+    }
+
+    .buttons a {
+      width: 100%;
+    }
+  }
+</style>
