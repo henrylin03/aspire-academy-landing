@@ -1,3 +1,65 @@
 ---
-
+import img from "@images/hero.jpg";
+import { Image } from "astro:assets";
 ---
+
+<section class="hero bg-base-200 p-12">
+  <div class="hero-content flex-col gap-10 lg:flex-row-reverse">
+    <Image
+      src={img}
+      alt="Student confidently speaking on stage after learning debating and public speaking"
+      loading="eager"
+      class="w-full max-w-2xl"
+    />
+    <div>
+      <h2 class="text-6xl font-bold tracking-wide">
+        Think critically, speak confidently
+      </h2>
+      <p class="py-6">
+        Specialised online debating coaching for NSW Selective School and
+        Private School students, taught by highly-experienced coach and
+        adjudicator.
+      </p>
+      <ul class="flex items-center gap-4">
+        <li>
+          <a class="btn btn-secondary" href="/enrol" role="button">
+            Enrol now<svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right h-4 w-4"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path
+                d="M13 6l6 6"></path></svg
+            >
+          </a>
+        </li>
+        <li>
+          <a
+            class="btn btn-secondary btn-outline"
+            href="/#free-consultation"
+            role="button"
+          >
+            Book a free chat<svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right h-4 w-4"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path
+                d="M13 6l6 6"></path></svg
+            >
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
