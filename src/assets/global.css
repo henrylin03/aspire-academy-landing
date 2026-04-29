@@ -1,12 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Zhi+Mang+Xing&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
 
 @import "tailwindcss";
-
-@theme {
-  --font-chinese-cursive: "Zhi Mang Xing", cursive;
-  --font-chinese-sans: "Noto Sans SC", sans-serif;
-}
-
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
