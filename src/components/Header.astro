@@ -3,7 +3,7 @@ import logoImg from "@images/quote-logo.jpg";
 import { Image } from "astro:assets";
 ---
 
-<header class="navbar bg-base-100 p-5 shadow-sm">
+<header class="navbar bg-white p-5 shadow-sm">
   <div class="navbar-start">
     <a href="/" class="flex items-center gap-2" aria-label="return to home page"
       ><Image
@@ -11,22 +11,20 @@ import { Image } from "astro:assets";
         loading="eager"
         alt="Logo for Aspire Academy"
         class="w-10 opacity-90"
-      /><h1 class="text-2xl font-semibold">Aspire Academy</h1></a
+      /><h1 class="font-semibold text-nowrap sm:text-2xl">Aspire Academy</h1></a
     >
   </div>
   <div class="navbar-end">
-    <button class="btn btn-secondary btn-lg">
+    <button class="btn btn-secondary lg:btn-lg">
       <span>Enrol now</span><svg
         xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right h-4 w-4 lg:h-8 lg:w-8"
         ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
           d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"
         ></path></svg
