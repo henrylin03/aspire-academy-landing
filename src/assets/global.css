@@ -1,17 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Zhi+Mang+Xing&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Outfit:wght@100..900&display=swap");
 
 @import "tailwindcss";
-
-@theme {
-  --font-chinese-cursive: "Zhi Mang Xing", cursive;
-  --font-chinese-sans: "Noto Sans SC", sans-serif;
+@plugin "daisyui" {
+  themes: "mytheme";
 }
-
 @plugin "daisyui/theme" {
-  name: "light";
+  name: "mytheme";
   default: true;
   prefersdark: false;
   color-scheme: "light";
+
   --color-base-100: oklch(98% 0 0);
   --color-base-200: oklch(96% 0.001 286.375);
   --color-base-300: oklch(92% 0.004 286.32);
@@ -40,4 +38,21 @@
   --border: 1.5px;
   --depth: 1;
   --noise: 1;
+}
+
+* {
+  font-family: "Google Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Outfit", sans-serif;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
