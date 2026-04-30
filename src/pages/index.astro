@@ -1,8 +1,11 @@
 ---
-import Hero from "@/components/pages/home/hero/index.astro";
+import Hero from "@components/pages/home/hero/index.astro";
 import Layout from "@layouts/BaseLayout.astro";
+import ClassesSection from "@components/pages/home/classesSection/index.astro";
+import { CLASSES_DATA } from "@/data/classOfferings";
 ---
 
 <Layout>
   <Hero />
+  <ClassesSection classOfferings={CLASSES_DATA} />
 </Layout>
