@@ -1,23 +1,36 @@
 ---
 import type { ClassOffering } from "@/data/classOfferings";
+import ClassCard from "./classCard.astro";
 
 interface Props {
-  classesData: ClassOffering[];
+  classOfferings: ClassOffering[];
 }
 
-// const { classesData } = Astro.props;
+const { classOfferings } = Astro.props;
 ---
 
-<section class="p-24 text-center">
-  <div class="mx-auto flex max-w-180 flex-col gap-3">
+<section class="p-24">
+  <div class="mx-auto flex max-w-180 flex-col gap-3 text-center">
     <p class="text-sm text-neutral-500 uppercase">Class offerings</p>
     <h2 class="mb-2 text-5xl font-bold tracking-tight">
       Online Debating Coaching Classes
     </h2>
     <p>
       Affordable, flexible online classes to help you build confidence - whether
-      that's knowing how to strucutre arguments, how to rebut others' arguments
+      that's knowing how to structure arguments, how to rebut others' arguments
       or just impromptu speaking.
     </p>
   </div>
+  <div class="wrapper">
+    {classOfferings.map((c) => <ClassCard classData={c} />)}
+  </div>
 </section>
+
+<style>
+  .wrapper {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+</style>
