@@ -3,14 +3,14 @@ import logo from "@images/quote-logo-circle.webp";
 import { Image } from "astro:assets";
 ---
 
-<header class="navbar bg-white p-5 shadow-sm">
+<header class="navbar bg-white px-4 shadow-sm sm:p-5">
   <div class="navbar-start">
     <a href="/" class="flex items-center gap-2" aria-label="return to home page"
       ><Image
         src={logo}
         loading="eager"
         alt="Logo for Aspire Academy"
-        class="w-10"
+        class="w-6 sm:w-10"
       /><h1 class="text-nowrap sm:text-2xl">Aspire Academy</h1></a
     >
   </div>
