@@ -9,16 +9,16 @@ interface Props {
 const { classOfferings } = Astro.props;
 ---
 
-<section class="p-24">
-  <div class="mx-auto flex max-w-180 flex-col gap-3 text-center">
+<section class="px-6 py-24 sm:px-12 lg:p-24">
+  <div class="mx-auto flex max-w-160 flex-col gap-3 text-center">
     <p class="text-sm text-neutral-500 uppercase">Class offerings</p>
-    <h2 class="mb-2 text-5xl font-bold tracking-tight">
-      Online Debating Coaching Classes
+    <h2 class="text-4xl font-bold tracking-tight sm:text-5xl md:mb-2">
+      Online Debating Classes
     </h2>
-    <p>
-      Affordable, flexible online classes to help you build confidence - whether
-      that's knowing how to structure arguments, how to rebut others' arguments
-      or just impromptu speaking.
+    <p class="text-sm opacity-90 md:text-base">
+      Affordable and flexible online debating classes to help you become a
+      confident speaker; whether that's knowing how to structure your arguments,
+      how to come up with rebuttals or just impromptu speaking.
     </p>
   </div>
   <div class="wrapper">
@@ -32,5 +32,13 @@ const { classOfferings } = Astro.props;
     display: flex;
     justify-content: center;
     gap: 2rem;
+  }
+
+  @media (max-width: 719px) {
+    .wrapper {
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+    }
   }
 </style>

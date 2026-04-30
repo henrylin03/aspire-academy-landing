@@ -19,6 +19,6 @@ export const CLASSES_DATA: ClassOffering[] = [
     imgSrc: soloImg,
     title: "1:1 debating private coaching",
     description:
-      "Get the maximum opportunity for tailored feedback in one-on-one private coaching for debating and public speaking, helping you get into your school's debating teams, win more debates and sharpen your speaking.",
+      "Tailored feedback in one-on-one private coaching classes for debating, helping you get into your school's debating teams, win more debates and sharpen your speaking.",
   },
 ];
