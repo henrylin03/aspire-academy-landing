@@ -1,0 +1,115 @@
+---
+import img from "@images/hero.jpg";
+import { Image } from "astro:assets";
+import Trapezium from "./trapezium.astro";
+---
+
+<section class="hero relative overflow-clip">
+  <div class="hero-content">
+    <Image
+      src={img}
+      alt="Student confidently speaking on stage after learning debating and public speaking"
+      loading="eager"
+      class="hero-image"
+    />
+    <div>
+      <h2 class="text-5xl font-bold tracking-wide sm:text-6xl">
+        Think critically, speak confidently
+      </h2>
+      <p class="py-6">
+        Specialised online debating coaching for NSW Selective School and
+        Private School students, taught by highly-experienced coach and
+        adjudicator.
+      </p>
+      <ul class="buttons">
+        <li>
+          <a class="btn btn-secondary" href="/enrol" role="button">
+            Enrol now<svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right h-4 w-4"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path
+                d="M13 6l6 6"></path></svg
+            >
+          </a>
+        </li>
+        <li>
+          <a
+            class="btn btn-primary btn-outline"
+            href="/#free-consultation"
+            role="button"
+          >
+            Book a free chat<svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right h-4 w-4"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path
+                d="M13 6l6 6"></path></svg
+            >
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <Trapezium />
+</section>
+
+<style>
+  .hero-content {
+    gap: 2rem;
+    flex-direction: row-reverse;
+    padding: 4rem;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .hero-image {
+    max-width: 40rem;
+    width: 100%;
+  }
+
+  @media (max-width: 1172px) {
+    .hero-content {
+      flex-direction: column;
+    }
+    .buttons {
+      gap: 0.5rem;
+    }
+  }
+
+  @media (max-width: 599px) {
+    .hero-content {
+      padding: 3rem 2.5rem;
+    }
+  }
+
+  @media (max-width: 399px) {
+    .hero-content {
+      padding: 1.75rem;
+    }
+
+    .buttons {
+      flex-direction: column;
+    }
+
+    .buttons a {
+      width: 100%;
+    }
+  }
+</style>
