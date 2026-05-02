@@ -31,7 +31,13 @@ const { classOfferings } = Astro.props;
     margin-top: 2.5rem;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 4rem;
+  }
+
+  @media (max-width: 999px) {
+    .wrapper {
+      gap: 2rem;
+    }
   }
 
   @media (max-width: 719px) {
