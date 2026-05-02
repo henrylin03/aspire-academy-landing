@@ -1,0 +1,126 @@
+---
+import { Image } from "astro:assets";
+import audienceImg from "@images/speaking-audience.jpg";
+import speechBubbleImg from "@images/speech-bubble-ellipses.jpg";
+import womanImg from "@images/woman-seated-water.jpg";
+---
+
+<section class="section">
+  <div class="image-grid">
+    <Image
+      src={speechBubbleImg}
+      alt="Learning how to speak better is a core skill in debating"
+      class="img -translate-y-8 justify-self-end"
+      loading="lazy"
+    />
+    <Image
+      src={audienceImg}
+      alt="Learn debating to speak a wide range of audiences"
+      loading="lazy"
+      class="img translate-y-1/2"
+    />
+    <Image
+      src={womanImg}
+      alt="Learn debating to help calm your nerves before speaking in front of an audience"
+      loading="lazy"
+      class="img -scale-x-100 place-self-center md:-translate-x-1/8"
+    />
+  </div>
+  <div class="text-container">
+    <h2 class="text-4xl font-bold tracking-tight sm:text-5xl md:mb-2">
+      Why learn debating?
+    </h2>
+    <p class="text-sm md:text-base">
+      Debating is more than just arguing; it's about using logic and language to
+      get your point across in a clear and concise way.
+      <br /><br />
+      Debating can sharpen your articulation, help others understand your perspective
+      and give you confidence to speak in front anybody, even with little to no preparation!
+      <br /><br />
+      At Aspire Academy, we can help you:
+    </p>
+    <ul class="benefits text-sm md:text-base">
+      <li>Learn how to come up with more arguments</li>
+      <li>Learn how to structure your arguments persuasively</li>
+      <li>Learn rebuttal techniques</li>
+      <li>Learn impromptu speaking</li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  /* SECTION */
+  .section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 3rem 1.5rem;
+    background-color: var(--color-base-100);
+  }
+
+  @media (min-width: 768px) {
+    .section {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 4rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section {
+      padding: 5rem;
+    }
+  }
+
+  /* IMAGE GRID */
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 15rem;
+    gap: 1rem;
+    align-self: center;
+    justify-self: end;
+  }
+  @media (max-width: 917px) {
+    .image-grid {
+      grid-auto-rows: 14rem;
+      gap: 2rem;
+      justify-self: center;
+    }
+  }
+
+  @media (max-width: 499px) {
+    .image-grid {
+      grid-auto-rows: 15rem;
+      gap: 0.75rem;
+    }
+  }
+
+  /* TEXT */
+  .text-container {
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* OTHER ELEMENTS */
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-field);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .benefits > li {
+    background: url(icons/circle-check.svg) no-repeat left top;
+    margin-left: 0.5rem;
+    padding: 0px 0 4px 2rem;
+  }
+</style>
