@@ -12,8 +12,12 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "**/*.{ts,astro,js}": "eslint --cache --fix",
-    "**/*": "prettier --write --ignore-unknown"
+    "*.{js,jsx,ts,tsx,astro}": [
+      "eslint --fix"
+    ],
+    "**/*": [
+      "prettier --write --ignore-unknown"
+    ]
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",
