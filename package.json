@@ -12,7 +12,7 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "**/*.{ts,astro,js}": "eslint --cache --fix",
+    "**/*.{jsx,tsx,astro,js,ts}": "eslint --fix",
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
