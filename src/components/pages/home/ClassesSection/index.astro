@@ -1,6 +1,7 @@
 ---
 import type { ClassOffering } from "@/data/classOfferings";
 import ClassCard from "./ClassCard.astro";
+import SectionHeading from "@/components/shared/SectionHeading.astro";
 
 interface Props {
   classOfferings: ClassOffering[];
@@ -12,9 +13,7 @@ const { classOfferings } = Astro.props;
 <section class="px-6 py-24 sm:px-12 lg:p-24">
   <div class="mx-auto flex max-w-160 flex-col gap-3 text-center">
     <p class="text-sm text-neutral-500 uppercase">Class offerings</p>
-    <h2 class="text-4xl font-bold sm:text-5xl md:mb-2">
-      Online Debating Classes
-    </h2>
+    <SectionHeading text="Online Debating Classes" />
     <p class="text-sm opacity-90 md:text-base">
       Affordable and flexible online debating classes to help you become a
       confident speaker; whether that's knowing how to structure your arguments,
