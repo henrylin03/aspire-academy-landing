@@ -1,18 +1,25 @@
 ---
-import logo from "@images/logo-with-text.png";
+import logoWithText from "@images/logo-with-text.png";
+import logoOnly from "@images/logo-symbol.png";
 import { Image } from "astro:assets";
 ---
 
-<header class="navbar bg-white pr-10 shadow-sm">
+<header class="navbar bg-white pr-4 shadow-sm lg:pr-8">
   <div class="navbar-start">
     <a href="/" class="flex items-center" aria-label="return to home page"
       ><Image
-        src={logo}
+        src={logoWithText}
         loading="eager"
         alt="Logo for Aspire Academy"
-        class="w-52 px-1 py-2"
-      /></a
-    >
+        class="hidden w-52 px-1 py-2 md:block"
+      />
+      <Image
+        src={logoOnly}
+        loading="eager"
+        alt="Logo for Aspire Academy"
+        class="w-24 md:hidden"
+      />
+    </a>
   </div>
   <div class="navbar-end">
     <a class="btn btn-secondary" href="/enrol" role="button">
