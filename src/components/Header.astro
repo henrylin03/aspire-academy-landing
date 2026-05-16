@@ -1,17 +1,21 @@
 ---
-import logo from "@images/quote-logo-circle.webp";
+import logo from "@images/logo-symbol.png";
 import { Image } from "astro:assets";
 ---
 
-<header class="navbar bg-white px-4 shadow-sm sm:p-5">
+<header class="navbar bg-white pr-4 shadow-sm">
   <div class="navbar-start">
-    <a href="/" class="flex items-center gap-2" aria-label="return to home page"
+    <a href="/" class="flex items-center" aria-label="return to home page"
       ><Image
         src={logo}
         loading="eager"
         alt="Logo for Aspire Academy"
-        class="w-6 sm:w-10"
-      /><h1 class="text-nowrap sm:text-2xl">Aspire Academy</h1></a
+        class="w-24"
+      /><h1
+        class="font-semibold tracking-wider text-nowrap uppercase sm:text-2xl"
+      >
+        Aspire Academy
+      </h1></a
     >
   </div>
   <div class="navbar-end">
