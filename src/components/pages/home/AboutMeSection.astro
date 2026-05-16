@@ -8,7 +8,7 @@ import { Image } from "astro:assets";
 
 <section class="px-6 py-24 sm:px-12 lg:p-24">
   <div
-    class="border-base-300 align-center mx-auto grid max-w-7xl grid-cols-[2fr_1fr] gap-4 rounded-2xl border bg-white p-10 shadow-lg"
+    class="border-base-300 align-center mx-auto grid max-w-7xl grid-cols-[1.5fr_1fr] gap-4 rounded-2xl border bg-white p-16 shadow-lg"
   >
     <div>
       <SectionHeading text="Who is the coach?" subtext="About" />
@@ -31,23 +31,25 @@ import { Image } from "astro:assets";
         </p>
       </div>
     </div>
-    <div>
+    <div class="grid grid-cols-2 justify-items-end gap-12">
       <Image
         src={profileImg}
         alt="Henry is the founder and head debating coach for Aspire Academy"
         loading="lazy"
-        class="w-50 rounded-4xl"
+        class="mask mask-circle"
       />
-      <Image
-        src={hostImg}
-        alt="Henry has years of experience teaching and adjudicating debating competitions across Greater Sydney"
-        class="w-50 rounded-xl"
-      />
-      <Image
-        src={mootingImg}
-        alt="Throughout high school, Henry participated in competitive debating and has years of experience in debating and public speaking"
-        class="w-50 rounded-xl"
-      />
+      <div class="flex translate-y-4 flex-col gap-4">
+        <Image
+          src={hostImg}
+          alt="Henry has years of experience teaching and adjudicating debating competitions across Greater Sydney"
+          class="w-40 rounded-md"
+        />
+        <Image
+          src={mootingImg}
+          alt="Throughout high school, Henry participated in competitive debating and has years of experience in debating and public speaking"
+          class="w-48 -translate-x-20 place-self-end rounded-md"
+        />
+      </div>
     </div>
   </div>
 </section>
