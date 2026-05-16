@@ -1,0 +1,27 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  modalId: string;
+  imgSrc: ImageMetadata;
+}
+
+const { modalId, imgSrc } = Astro.props;
+---
+
+<dialog id={modalId} class="modal">
+  <div class="modal-box flex flex-col gap-4 rounded-md bg-white">
+    <h3 class="text-center text-2xl font-bold">Add Aspire Academy on WeChat</h3>
+    <Image
+      src={imgSrc}
+      alt="Scan QR code to add Aspire Academy on WeChat"
+      class="mx-auto w-80"
+    />
+    <div class="modal-action">
+      <form method="dialog">
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>

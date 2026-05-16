@@ -2,6 +2,8 @@
 import SectionHeading from "@/components/shared/SectionHeading.astro";
 import { CONTACT_DETAILS } from "@/data/contactDetails";
 import Card from "./ContactMethodCard.astro";
+import WeChatQRModal from "./WeChatQRModal.astro";
+import weChatQRCodeImg from "@images/qr-code.jpg";
 ---
 
 <section class="px-8 pb-24 sm:px-12 lg:p-24">
@@ -67,9 +69,11 @@ import Card from "./ContactMethodCard.astro";
       >
         <button
           class="link link-secondary link-hover text-left text-sm font-bold md:text-base"
-          >View QR code</button
+          onclick="weChatModal.showModal()">View QR code</button
         >
       </Card>
     </div>
   </div>
 </section>
+
+<WeChatQRModal modalId="weChatModal" imgSrc={weChatQRCodeImg} />
