@@ -1,0 +1,13 @@
+---
+type Props = { text: string; subtext?: string };
+const { text, subtext } = Astro.props;
+---
+
+<div>
+  {
+    subtext && (
+      <p class="text-xs text-neutral-500 uppercase sm:text-sm">{subtext}</p>
+    )
+  }
+  <h2 class="text-4xl font-bold sm:text-5xl md:mb-2">{text}</h2>
+</div>
