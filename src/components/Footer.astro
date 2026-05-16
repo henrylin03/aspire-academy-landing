@@ -1,28 +1,27 @@
 ---
 import { Image } from "astro:assets";
-import logoImg from "@images/quote-logo-circle.webp";
+import logo from "@images/logo-with-text-grey.png";
 ---
 
 <footer
   class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10"
 >
-  <aside class="mx-auto gap-4">
+  <aside class="mx-auto max-w-md gap-4">
     <a
       href="/"
       aria-label="Return to Aspire Academy debating's home page"
       class="mx-auto sm:mx-0"
       ><Image
-        src={logoImg}
-        alt="Logo for Aspire Academy debating"
-        class="w-12"
+        src={logo}
+        alt="Logo for Aspire Academy by Huaxia"
+        class="w-3xs"
       /></a
     >
-    <div class="text-center sm:text-left">
-      <h2 class="text-lg font-semibold tracking-wide">Aspire Academy</h2>
-      <p class="opacity-80">
-        Sydney-based online debating and public speaking classes
-      </p>
-    </div>
+    <p class="text-center opacity-60 sm:text-left">
+      Aspire Academy is a Sydney-based public speaking academy, offering online
+      debating, public speaking and leadership classes for NSW school students,
+      Year 3 and above.
+    </p>
   </aside>
   <section class="m-auto">
     <a class="btn btn-secondary" href="/enrol" role="button">
