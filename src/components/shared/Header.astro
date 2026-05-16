@@ -1,21 +1,28 @@
 ---
-import logo from "@images/quote-logo-circle.webp";
+import logoWithText from "@images/logos/logo-with-text.png";
+import logoOnly from "@images/logos/logo-symbol.png";
 import { Image } from "astro:assets";
 ---
 
-<header class="navbar bg-white px-4 shadow-sm sm:p-5">
+<header class="navbar bg-white pr-4 shadow-sm lg:pr-8">
   <div class="navbar-start">
-    <a href="/" class="flex items-center gap-2" aria-label="return to home page"
+    <a href="/" class="flex items-center" aria-label="return to home page"
       ><Image
-        src={logo}
+        src={logoWithText}
         loading="eager"
         alt="Logo for Aspire Academy"
-        class="w-6 sm:w-10"
-      /><h1 class="text-nowrap sm:text-2xl">Aspire Academy</h1></a
-    >
+        class="hidden w-52 px-1 py-2 md:block"
+      />
+      <Image
+        src={logoOnly}
+        loading="eager"
+        alt="Logo for Aspire Academy"
+        class="w-24 md:hidden"
+      />
+    </a>
   </div>
   <div class="navbar-end">
-    <a class="btn btn-secondary lg:btn-lg" href="/enrol" role="button">
+    <a class="btn btn-secondary" href="/enrol" role="button">
       <span>Enrol now</span><svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
