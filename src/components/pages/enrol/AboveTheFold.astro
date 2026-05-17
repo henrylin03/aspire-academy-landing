@@ -8,12 +8,16 @@ interface Props {
 const { pageTitle, description, eyebrow } = Astro.props;
 ---
 
-<section class="bg-primary text-primary-content p-16 text-center">
-  <div class="mx-auto flex max-w-xl flex-col gap-4">
-    <p class="text-sm font-bold uppercase opacity-70">
+<section
+  class="bg-primary text-primary-content px-8 py-16 text-center lg:px-16"
+>
+  <div class="mx-auto flex max-w-md flex-col gap-4">
+    <p
+      class="text-primary-content text-xs font-bold uppercase opacity-60 md:text-sm"
+    >
       {eyebrow}
     </p>
-    <h1 class="text-6xl font-bold">{pageTitle}</h1>
-    <p class="text-sm opacity-90 md:text-base">{description}</p>
+    <h1 class="text-5xl font-bold md:text-6xl">{pageTitle}</h1>
+    <p class="text-sm md:text-base">{description}</p>
   </div>
 </section>
