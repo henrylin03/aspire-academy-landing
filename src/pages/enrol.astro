@@ -1,12 +1,31 @@
 ---
 import AboveTheFold from "@/components/pages/enrol/AboveTheFold.astro";
-import { SEO_MAP } from "@/data/seoData";
+import { SEO_MAP } from "@/data/seo/metaValues";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import type { WithContext, Thing } from "schema-dts";
 
+const BREADCRUMB_SCHEMA: WithContext<Thing> = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://aspireacademy.site",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Enrol now",
+      item: "https://aspireacademy.site/enrol",
+    },
+  ],
+};
 const seoData = SEO_MAP["/enrol"];
 ---
 
-<BaseLayout seoData={seoData}>
+<BaseLayout seoData={seoData} schemas={[BREADCRUMB_SCHEMA]}>
   <AboveTheFold
     eyebrow="Start your debating journey today"
     pageTitle="Enrol now"
