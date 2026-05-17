@@ -7,11 +7,25 @@ import WhyLearnDebatingSection from "@components/pages/home/WhySection/index.ast
 import AboutMeSection from "@/components/pages/home/AboutMeSection.astro";
 import ContactSection from "@/components/pages/home/ContactSection/index.astro";
 import { SEO_MAP } from "@/data/seo/metaValues";
+import type { WithContext, Thing } from "schema-dts";
+
+const BREADCRUMB_SCHEMA: WithContext<Thing> = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://aspireacademy.site",
+    },
+  ],
+};
 
 const seoData = SEO_MAP["/"];
 ---
 
-<Layout seoData={seoData}>
+<Layout seoData={seoData} schemas={[BREADCRUMB_SCHEMA]}>
   <HeroSection />
   <ClassesSection classOfferings={CLASSES_DATA} />
   <WhyLearnDebatingSection />

@@ -1,11 +1,19 @@
 ---
 import type { SeoData } from "@/data/seo/metaValues";
+import { Schema } from "astro-seo-schema";
+import {
+  ORGANISATION_SCHEMA,
+  WEBSITE_SCHEMA,
+  SERVICE_SCHEMA,
+} from "@/data/seo/schemas";
+import type { WithContext, Thing } from "schema-dts";
 
 interface Props {
   seoData: SeoData;
+  schemas?: WithContext<Thing>[];
 }
 
-const { seoData } = Astro.props;
+const { seoData, schemas } = Astro.props;
 const { title, description, keywords, canonicalLink, ogImagePath } = seoData;
 ---
 
@@ -33,3 +41,9 @@ const { title, description, keywords, canonicalLink, ogImagePath } = seoData;
 
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- schemas -->
+<Schema item={WEBSITE_SCHEMA} />
+<Schema item={ORGANISATION_SCHEMA} />
+<Schema item={SERVICE_SCHEMA} />
+{schemas && schemas.map((schema) => <Schema item={schema} />)}
