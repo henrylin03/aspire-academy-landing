@@ -1,13 +1,16 @@
 ---
 import AboveTheFold from "@/components/pages/enrol/AboveTheFold.astro";
+import { SEO_MAP } from "@/data/seoData";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const seoData = SEO_MAP["/enrol"];
 ---
 
-<BaseLayout>
+<BaseLayout seoData={seoData}>
   <AboveTheFold
     eyebrow="Start your debating journey today"
     pageTitle="Enrol now"
-    description="Join Sydney's premier online debating school, helping students in Years 3 and above become confident speakers and sharp thinkers."
+    description="Join Sydney's premier online debating school, helping students in Years 4+ become confident speakers and sharp thinkers."
   />
   <section class="px-6 py-12 sm:px-12">
     <iframe
