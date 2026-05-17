@@ -3,7 +3,7 @@ export type SeoData = {
   description: string;
   keywords: string[];
   canonicalLink: string;
-  ogImagePath?: string;
+  ogImagePath: string;
 };
 
 export const SEO_MAP: Record<string, SeoData> = {
@@ -22,6 +22,7 @@ export const SEO_MAP: Record<string, SeoData> = {
       "isda debating coaching",
     ],
     canonicalLink: "https://aspireacademy.site",
+    ogImagePath: "/branding/logo-with-text.png",
   },
   "/enrol": {
     title:
@@ -34,5 +35,6 @@ export const SEO_MAP: Record<string, SeoData> = {
       "enrol online debating class",
     ],
     canonicalLink: "https://aspireacademy.site/enrol",
+    ogImagePath: "/branding/logo-with-text.png",
   },
 };
