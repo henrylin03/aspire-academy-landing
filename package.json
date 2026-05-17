@@ -24,6 +24,8 @@
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^6.3.3",
     "astro-robots-txt": "^1.0.0",
+    "astro-seo-schema": "^6.0.0",
+    "schema-dts": "^2.0.0",
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
