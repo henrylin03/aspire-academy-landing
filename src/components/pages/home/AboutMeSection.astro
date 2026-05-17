@@ -1,0 +1,63 @@
+---
+import SectionHeading from "@/components/shared/SectionHeading.astro";
+import profileImg from "@images/henry/headshot.jpg";
+import hostImg from "@images/henry/host.jpg";
+import mootingImg from "@images/henry/mooting.jpg";
+import { Image } from "astro:assets";
+---
+
+<section class="px-6 pb-24 sm:px-12 lg:p-24">
+  <div
+    class="border-base-300 mx-auto flex max-w-7xl flex-col items-center justify-items-center gap-6 rounded-2xl border bg-white p-6 shadow-lg sm:gap-12 sm:p-12 lg:grid lg:grid-cols-[1.5fr_1fr] lg:p-16"
+  >
+    <div>
+      <SectionHeading text="Who is the coach?" subtext="About" />
+      <div class="mt-4 flex flex-col gap-4 text-sm opacity-90 md:text-base">
+        <p>Hi, I'm Henry - lovely to meet you all!</p>
+        <p>
+          I started debating in primary school and represented my school in the
+          NSW Premier's Debating Challenge (PDC). After graduating, I coached
+          and adjudicated public speaking and debating for over 5 years,
+          including at selective schools like North Sydney Boys and North Sydney
+          Girls, and private schools that compete in ISDA and GPS competitions.
+        </p>
+        <p>
+          I started Aspire Academy to share the skills I gained over the years
+          in debating. Debating gave me a structured way of thinking, a keen
+          interest on current affairs, and confidence to speak in front of
+          people - skills I want to pass on to all my students to help you
+          perform better academically, as well as empower you to become more
+          articulate and more confident.
+        </p>
+      </div>
+    </div>
+    <div
+      class="hidden grid-cols-[1.5fr_1fr] items-center gap-4 lg:grid xl:grid-cols-[1.75fr_1fr]"
+    >
+      <Image
+        src={profileImg}
+        alt="Henry is the founder and head debating coach for Aspire Academy"
+        loading="lazy"
+        class="mask z-99 mask-circle shadow-xl"
+      />
+      <div class="flex translate-y-4 flex-col gap-4">
+        <Image
+          src={hostImg}
+          alt="Henry has years of experience teaching and adjudicating debating competitions across Greater Sydney"
+          class="rounded-md shadow-xl"
+        />
+        <Image
+          src={mootingImg}
+          alt="Throughout high school, Henry participated in competitive debating and has years of experience in debating and public speaking"
+          class="w-40 -translate-x-10 translate-y-1/16 place-self-end rounded-md shadow-xl"
+        />
+      </div>
+    </div>
+    <Image
+      src={profileImg}
+      alt="Henry is the founder and head debating coach for Aspire Academy"
+      loading="lazy"
+      class="mask w-[50%] max-w-3xs mask-circle shadow-xl lg:hidden"
+    />
+  </div>
+</section>

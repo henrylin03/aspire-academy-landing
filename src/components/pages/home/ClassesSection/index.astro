@@ -1,0 +1,48 @@
+---
+import type { ClassOffering } from "@/data/classOfferings";
+import ClassCard from "./ClassCard.astro";
+import SectionHeading from "@/components/shared/SectionHeading.astro";
+
+interface Props {
+  classOfferings: ClassOffering[];
+}
+
+const { classOfferings } = Astro.props;
+---
+
+<section class="px-12 py-24 lg:p-24">
+  <div class="mx-auto flex max-w-160 flex-col gap-3 text-center">
+    <SectionHeading text="Online Debating Classes" subtext="Class offerings" />
+    <p class="text-sm opacity-90 md:text-base">
+      Affordable and flexible online debating classes to help you become a
+      confident speaker; whether that's knowing how to structure your arguments,
+      how to come up with rebuttals or just impromptu speaking.
+    </p>
+  </div>
+  <div class="wrapper">
+    {classOfferings.map((c) => <ClassCard classData={c} />)}
+  </div>
+</section>
+
+<style>
+  .wrapper {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  @media (max-width: 999px) {
+    .wrapper {
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 719px) {
+    .wrapper {
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import audienceImg from "@images/speaking-audience.jpg";
+import speechBubbleImg from "@images/speech-bubble-ellipses.jpg";
+import womanImg from "@images/woman-seated-water.jpg";
+import "./why-section-styles.css";
+import SectionHeading from "@/components/shared/SectionHeading.astro";
+---
+
+<section class="section">
+  <div class="image-grid">
+    <Image
+      src={speechBubbleImg}
+      alt="Learning how to speak better is a core skill in debating"
+      class="img -translate-y-8 justify-self-end"
+      loading="lazy"
+    />
+    <Image
+      src={audienceImg}
+      alt="Learn debating to speak a wide range of audiences"
+      loading="lazy"
+      class="img translate-y-1/2"
+    />
+    <Image
+      src={womanImg}
+      alt="Learn debating to help calm your nerves before speaking in front of an audience"
+      loading="lazy"
+      class="img -scale-x-100 place-self-center md:-translate-x-1/8"
+    />
+  </div>
+  <div class="text-container">
+    <SectionHeading text="Why Learn Debating?" />
+    <p class="text-sm md:text-base">
+      Debating is more than just arguing; it's about using logic and language to
+      get your point across in a clear and concise way.
+      <br /><br />
+      Debating can sharpen your articulation, help others understand your perspective
+      and give you confidence to speak in front anybody, even with little to no preparation!
+      <br /><br />
+      At Aspire Academy, we can help you:
+    </p>
+    <ul class="benefits text-sm md:text-base">
+      <li>Learn how to come up with more arguments</li>
+      <li>Learn how to structure your arguments persuasively</li>
+      <li>Learn rebuttal techniques</li>
+      <li>Learn impromptu speaking</li>
+    </ul>
+  </div>
+</section>

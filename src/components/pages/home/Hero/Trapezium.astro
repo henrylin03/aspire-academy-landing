@@ -1,0 +1,33 @@
+<div class="trapezium"></div>
+
+<style>
+  .trapezium {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: var(--color-secondary);
+    opacity: 0.2;
+    transform: scale(1.1) rotate(-5deg) translateY(-35%);
+  }
+
+  @media (max-width: 1184px) {
+    .trapezium {
+      transform: scale(1.25) rotate(-10deg) translateY(-30%);
+    }
+  }
+
+  @media (max-width: 549px) {
+    .trapezium {
+      transform: scale(1.25) rotate(-10deg) translateY(-25%);
+    }
+  }
+
+  @media (max-width: 444px) {
+    .trapezium {
+      transform: scale(1.35) rotate(-10deg) translate(2%, -50%);
+    }
+  }
+</style>

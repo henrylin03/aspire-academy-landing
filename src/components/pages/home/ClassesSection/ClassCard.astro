@@ -1,0 +1,25 @@
+---
+import type { ClassOffering } from "@/data/classOfferings";
+import { Image } from "astro:assets";
+
+interface Props {
+  classData: ClassOffering;
+}
+
+const { classData } = Astro.props;
+const { title, description, imgSrc: src } = classData;
+---
+
+<article class="card bg-base-100 card-border w-96 rounded-lg shadow-lg">
+  <figure>
+    <Image src={src} alt={`Learn debating at Aspire Academy's ${title}`} />
+  </figure>
+  <section class="card-body">
+    <h2 class="card-title capitalize">{title}</h2>
+    <p class="opacity-90">{description}</p>
+    <div class="mt-6">
+      <a class="btn btn-primary btn-block btn-md" href="/enrol">Enrol now</a>
+      <!-- TODO: need to probably populate the enrolment form differently depending on how the user got there from here - optional params? -->
+    </div>
+  </section>
+</article>

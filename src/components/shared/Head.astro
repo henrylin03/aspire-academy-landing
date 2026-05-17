@@ -1,0 +1,33 @@
+---
+import type { SeoData } from "@/data/seoData";
+
+interface Props {
+  seoData: SeoData;
+}
+
+const { seoData } = Astro.props;
+const { title, description, keywords, canonicalLink, ogImagePath } = seoData;
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords.join(",")} />
+<link rel="canonical" href={canonicalLink} />
+
+<meta property="og:title" content={title} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalLink} />
+<meta property="og:image" content={ogImagePath} />
+<meta property="og:description" content={description} />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content={canonicalLink} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:creator" content="henrylin.io" />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImagePath} />
+
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
