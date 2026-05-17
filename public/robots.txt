@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aspireacademy.site/sitemap.xml
+Sitemap: https://aspireacademy.site/sitemap-index.xml
