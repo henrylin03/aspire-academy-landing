@@ -1,9 +1,12 @@
 ---
 import AboveTheFold from "@/components/pages/enrol/AboveTheFold.astro";
+import { SEO_MAP } from "@/data/seoData";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const seoData = SEO_MAP["/enrol"];
 ---
 
-<BaseLayout>
+<BaseLayout seoData={seoData}>
   <AboveTheFold
     eyebrow="Start your debating journey today"
     pageTitle="Enrol now"

@@ -2,14 +2,18 @@
 import "@/assets/global.css";
 import Header from "@components/shared/Header.astro";
 import Footer from "@components/shared/Footer.astro";
+import Head from "@/components/shared/Head.astro";
+import type { SeoData } from "@/data/seoData";
+
+interface Props {
+  seoData: SeoData;
+}
+
+const { seoData } = Astro.props;
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-  </head>
+  <Head seoData={seoData} />
   <body>
     <Header />
     <main>
